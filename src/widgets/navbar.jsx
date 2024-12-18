@@ -85,8 +85,6 @@ const Navbar = () => {
             Media
           </NavLink>
         </div>
-
-        {/* Contact Us Button */}
         {/* Contact Us Button */}
         <a href="/contact">
           <button className="hidden md:block bg-white text-[#14509F] font-normal text-base py-2 xl:py-3 px-6 xl:px-8 rounded-full hover:bg-[#42689C] hover:text-[#FFFFFF] transition duration-1000">

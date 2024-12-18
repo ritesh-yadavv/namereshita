@@ -38,13 +38,6 @@ const Testimonials = () => {
     } 
   };
 
-  // Handles moving to the next slide
-  const handleNext = () => {
-    if (swiperRef.current) {
-      swiperRef.current.slideNext();
-      
-    } 
-  };
 
   return (
     <div className="flex flex-col items-center bg-[#E8E8E8] -mt-10 sm:-mt-0 xl:py-10">
@@ -73,6 +66,7 @@ const Testimonials = () => {
           setActiveIndex(swiper.realIndex); 
         }}
         spaceBetween={30}
+      
         centeredSlidesBounds={true}
         // centeredSlides={true}
         loop={true}
@@ -90,7 +84,7 @@ const Testimonials = () => {
                 backgroundColor: testimonial.color,
                 opacity: index === activeIndex ? 1 : 0.5, // Highlight active slide
               }}
-              className="shadow-lg rounded-lg p-6 text-center w-[300px] md:w-[390px] h-[380px] transition-all duration-300"
+              className="shadow-lg rounded-lg p-6 text-center w-[300px] md:w-[260px] xl:w-[390px] h-[380px] transition-all duration-300"
             >
               <img
                 src={testimonial.image}
@@ -113,7 +107,7 @@ const Testimonials = () => {
           &lt;
         </button>
         <button
-          onClick={handleNext}
+          onClick={handlePrev}
           className="bg-white border-2 border-black text-black text-2xl w-[43px] h-[43px] rounded-full shadow-md hover:bg-[#42689C]"
         >
           &gt;

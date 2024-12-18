@@ -39,7 +39,7 @@ function Index() {
             }
           />
           <Route
-            path="/Products"
+            path="/products"
             element={
               <React.Suspense fallback="Loading Products...">
                 <LazyProducts />
@@ -47,7 +47,7 @@ function Index() {
             }
           />
           <Route
-            path="/Careers"
+            path="/careers"
             element={
               <React.Suspense fallback="Loading Careers...">
                 <LazyCareer />
@@ -55,7 +55,7 @@ function Index() {
             }
           />
           <Route
-            path="/Media"
+            path="/media"
             element={
               <React.Suspense fallback="Loading Media...">
                 <LazyMedia />
@@ -63,7 +63,7 @@ function Index() {
             }
           />
           <Route
-            path="/Contact"
+            path="/contact"
             element={
               <React.Suspense fallback="Loading Contact...">
                 <LazyContact />

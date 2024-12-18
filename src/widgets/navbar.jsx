@@ -17,13 +17,13 @@ const Navbar = () => {
         {/* Logo Section */}
         <div className="flex items-center">
           <Link to="/">
-          <img
-            src={ReshitaLogo}
-            className="h-11  md:h-14 lg:h-[60px] sm:w-auto"
-            alt="Reshita Logo"
-          />
+            <img
+              src={ReshitaLogo}
+              className="h-11  md:h-14 lg:h-[60px] sm:w-auto"
+              alt="Reshita Logo"
+            />
           </Link>
-          
+
 
         </div>
 
@@ -86,11 +86,22 @@ const Navbar = () => {
           </NavLink>
         </div>
         {/* Contact Us Button */}
-        <a href="/contact">
-          <button className="hidden md:block bg-white text-[#14509F] font-normal text-base py-2 xl:py-3 px-6 xl:px-8 rounded-full hover:bg-[#42689C] hover:text-[#FFFFFF] transition duration-1000">
+        <NavLink
+          to="/contact" // Replace href with 'to' in NavLink
+          onClick={handleNavLinkClick} // Optional: Handle additional events
+          className={({ isActive }) =>
+            isActive
+              ? " " // Active state style
+              : "" // Inactive hover state style
+          }
+        >
+          <button
+            className="hidden md:block bg-white text-[#14509F] font-normal text-base py-2 xl:py-3 px-6 xl:px-8 rounded-full hover:bg-[#42689C] hover:text-[#FFFFFF] transition duration-1000"
+          >
             Contact Us
           </button>
-        </a>
+        </NavLink>
+
 
         {/* Mobile Menu Toggle */}
         <button
